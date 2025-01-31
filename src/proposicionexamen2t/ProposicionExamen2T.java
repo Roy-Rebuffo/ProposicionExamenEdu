@@ -1,7 +1,7 @@
 package proposicionexamen2t;
 
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class ProposicionExamen2T {
 
     public static void main(String[] args) {
@@ -17,6 +17,7 @@ public class ProposicionExamen2T {
         System.out.println("==========================");
         System.out.println("");
         System.out.println("\t\tApartado a)");
+        System.out.println("\t\t---------------");
         
         for (int i = 0; i < tNum.length; i++) {
             System.out.println("\t\t"+tNum[i]);
@@ -31,6 +32,7 @@ public class ProposicionExamen2T {
         System.out.println("\t\t==========================");
         System.out.println("");
         System.out.println("\t\tApartado b)");
+        System.out.println("\t\t---------------");
         
         for (int i = 0; i < tNum.length; i++) {
             if (tNum[i]<=MENOR) {
@@ -44,6 +46,7 @@ public class ProposicionExamen2T {
         System.out.println("\t\t==========================");
         System.out.println("");
         System.out.println("\t\tApartado c)");
+        System.out.println("\t\t--------------");
         
         for (int i = 0; i < tNum.length; i++) {
             C_NUM ++;
@@ -56,6 +59,7 @@ public class ProposicionExamen2T {
         System.out.println("\t\t==========================");
         System.out.println("");
         System.out.println("\t\tApartado d)");
+        System.out.println("\t\t---------------");
         
         System.out.print("\t\tIndica la posicion del elemento del array que quieres editar: ");
         pos = dato.nextInt();
@@ -63,13 +67,29 @@ public class ProposicionExamen2T {
         System.out.print("\t\tIntroduce el nuevo valor: ");
         int nuevoValor = dato.nextInt();
         
-        tNum[pos] = nuevoValor;
+        tNum[pos - 1] = nuevoValor;
         
         System.out.print("\t\tLa lista editada es: ");
         for (int num : tNum) {
             System.out.print(num + " ");
         }
         System.out.println();
+        
+        System.out.println("\t\t==========================");
+        System.out.println("");
+        System.out.println("\t\tApartado e)");
+        System.out.println("\t\t---------------");
+        
+        int [] copiatNum = new int[tNum.length];
+        
+        System.arraycopy(tNum, 0, copiatNum, 0, copiatNum.length);
+        
+        Arrays.sort(copiatNum);
+        
+        System.out.println("\t\tLa tabla desordenada se ve asi: " + Arrays.toString(tNum));
+        System.out.println("\t\tLa tabla ordenada ascendentemente queda de esta forma" 
+        + Arrays.toString(copiatNum));
+        
     }
     
     public static void menu(){//procedimiento
