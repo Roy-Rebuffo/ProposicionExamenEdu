@@ -92,6 +92,21 @@ public class ProposicionExamen2T {
         
     }
     
+    
+    public static void ejercicio3(String texto){
+        System.out.println("Resolucion del ejercicio 3");
+        System.out.println("==========================");
+        System.out.println("");
+        System.out.println("\t\tQuitar espacios intermedios");
+        System.out.println("\t\t---------------");
+        
+        String resultado = texto.replaceAll("\\s+", " ").trim();
+        System.out.println("\t\tLa antigua cadena se ve asi: \"" + texto + "\"");
+        System.out.println("");
+        System.out.println("\t\tLa nueva cadena SIN ESPACIOS se ve asi: \"" + resultado
+        + "\"");
+    }
+    
     public static void menu(){//procedimiento
         int opcion=-1;
         Scanner dato = new Scanner(System.in);
@@ -107,7 +122,7 @@ public class ProposicionExamen2T {
             System.out.println("====\n");
             System.out.println("\t(1) Ejercicio 1.- Ejercicio1");
             System.out.println("\t(2) Ejercicio 2.- Ordenar Asc. por Nombres");
-            System.out.println("\t(3) Ejercicio 3.- Ordenar Desc. por Notas");
+            System.out.println("\t(3) Ejercicio 3.- Ejercicio3");
             System.out.println("\t(0) SALIR");
             System.out.print("\nSeleccione la opción elegida: ");
             opcion=dato.nextInt();
@@ -126,7 +141,8 @@ public class ProposicionExamen2T {
                     //ejercicio2(tNum, MENOR);
                     break;
                 case 3:
-                    //ordenarNotaDesc(tNombres,tNotas);
+                    String texto = "Hola    me    llamo Pedro";
+                    ejercicio3(texto);
                     break;
                 case 4:
                     /*for(int i=0;i<tNotas.length;i++){
